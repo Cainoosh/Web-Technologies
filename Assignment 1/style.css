@@ -1,0 +1,156 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.main {
+  background-color: #ffffff;
+  padding: 50px;
+  box-shadow: 0px 2px 20px rgba(121, 118, 118, 0.527);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: slideDown 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #333;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.section-title {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.skill-title {
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
+
+.skill-list {
+  margin: 0 10px 0 20px;
+  padding: 0;
+}
+
+.edu-item,
+.project-item,
+.cert-item {
+  margin-bottom: 20px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.degree,
+.project-name,
+.cert-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.edu-date,
+.project-date {
+  font-size: 0.9em;
+  color: #777;
+  margin: 0;
+}
+
+.uni,
+.project-tech,
+.cert-issuer {
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+ul {
+  margin: 5px 70px 0 20px;
+  padding: 0;
+  text-align: justify;
+  list-style-type: square;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.project1,
+.project2,
+.project3,
+.project4,
+.project5 {
+  animation-name: slideIn;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  animation-fill-mode: both;
+}
+
+.project-details li {
+  margin-bottom: 6px;
+}
+
+.about-text,
+.edu-details {
+  margin: 5px 10px 0 0;
+}
+
+p {
+  text-align: justify;
+}

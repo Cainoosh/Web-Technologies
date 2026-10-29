@@ -675,3 +675,107 @@ a {
     background-position: center;
   }
 }
+
+/* Task 2: Form Base Styles */
+.checkout-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.checkout-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.checkout-fieldset {
+  border: 1px solid #e2ddd5;
+  padding: 24px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.checkout-fieldset legend {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 8px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #e2ddd5;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.error-msg {
+  display: none;
+  color: #e74c3c;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* Validation */
+.form-group input:user-invalid,
+.form-group select:user-invalid {
+  border-color: #e74c3c;
+}
+
+.form-group input:user-invalid + .error-msg,
+.form-group select:user-invalid + .error-msg {
+  display: block;
+}
+
+.btn-submit-checkout {
+  grid-column: 1 / -1;
+  width: 100%;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* BP = 629px Breakpoint */
+@media (min-width: 629px) {
+  .checkout-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-group label {
+    margin-bottom: 0;
+    text-align: right;
+  }
+
+  .error-msg {
+    grid-column: 2 / -1;
+  }
+}
